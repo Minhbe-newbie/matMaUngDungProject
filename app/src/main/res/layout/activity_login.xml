@@ -58,16 +58,7 @@
             android:textColor="#EE2F2A"
             android:textSize="30dp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:paddingBottom="10dp"
-            android:text="HỌC VIỆN KỸ THUẬT MẬT MÃ"
-            android:textSize="15dp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
