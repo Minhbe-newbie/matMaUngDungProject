@@ -67,27 +67,27 @@
             android:weightSum="2">
 
             <EditText
-                android:id="@+id/textView3"
+                android:id="@+id/edtLoginEmail"
                 android:layout_width="340dp"
                 android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/border_textfield"
-                android:fontFamily="@font/roboto_bold"
-                android:hint="Mật khẩu"
-                android:paddingStart="10dp"
-                android:textSize="15dp" />
-
-            <EditText
-                android:id="@+id/textView2"
-                android:layout_width="340dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="15dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/border_textfield"
                 android:fontFamily="@font/roboto_bold"
                 android:hint="Email"
+                android:paddingStart="10dp"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edtLoginPassword"
+                android:layout_width="340dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_textfield"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Mật khẩu"
                 android:paddingStart="10dp"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -108,6 +108,7 @@
                 android:textColor="@color/red_500" />
 
             <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="208dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
