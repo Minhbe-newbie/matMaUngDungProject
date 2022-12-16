@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/home_navi_bar"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/Student"
+        android:icon="@drawable/school_navi_bar"
+        android:title="Sinh viên" />
+    <item
+        android:id="@+id/Payment"
+        android:icon="@drawable/payment_navi_bar"
+        android:title="Thanh toán" />
+    <item
+        android:id="@+id/Account"
+        android:icon="@drawable/account_navi_bar"
+        android:title="Tài khoản" />
+</menu>
