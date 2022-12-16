@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 
 public class LoginActivity extends AppCompatActivity {
-    private String loginEmail , loginPassword ;
+    private String loginUserName , loginPassword ;
 
-    EditText edtLoginEmail,edtLoginPassword;
+    EditText edtLoginUserName,edtLoginPassword;
     Button btnLogin;
 
 
@@ -21,16 +21,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edtLoginEmail =  findViewById(R.id.edtLoginEmail);
+        edtLoginUserName =  findViewById(R.id.edtLoginUserName);
         edtLoginPassword = findViewById(R.id.edtLoginPassword);
 
         btnLogin =  findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginEmail = (edtLoginEmail.getText().toString());
+                loginUserName = (edtLoginUserName.getText().toString());
                 loginPassword = (edtLoginPassword.getText().toString());
-                Toast.makeText(LoginActivity.this, loginEmail +loginPassword, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, edtLoginUserName +loginPassword, Toast.LENGTH_SHORT).show();
             }
         });
 
