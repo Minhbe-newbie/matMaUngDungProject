@@ -1,15 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentHome.StudentFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity=""
-        android:text="ay la trang hoc sinh" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/red_rectangle" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="112dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="148dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Sinh Viên"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/graduating_student" />
+
+        <TextView
+
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Thông tin sinh viên" />
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+             android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/file_storage" />
+
+        <TextView
+
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Chương trình học" />
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/edit_png" />
+
+        <TextView
+
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Đăng kí tín" />
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/calendar_png" />
+
+        <TextView
+
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Lịch cá nhân" />
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search_png" />
+
+        <TextView
+
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Tra cứu điểm" />
+
+        <ImageView
+
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
