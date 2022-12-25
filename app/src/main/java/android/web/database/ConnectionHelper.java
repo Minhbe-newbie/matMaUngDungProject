@@ -1,4 +1,4 @@
-package android.web;
+package android.web.database;
 
 import android.os.StrictMode;
 import android.util.Log;

@@ -1,8 +1,9 @@
-package android.web.Login;
+package android.web.helper;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.web.Login.Utils;
 
 import java.util.Properties;
 

@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.web.ConnectionHelper;
+import android.web.database.ConnectionHelper;
 import android.web.MainHomeActivity;
 import android.web.R;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Connection;
@@ -80,6 +81,13 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        View btnForgetPassword = (TextView)findViewById(R.id.btnForgetPassword);
+        btnForgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
