@@ -151,7 +151,6 @@
             android:gravity="right"
             android:paddingRight="40dp"
             android:text="abc$" />
-
     </LinearLayout>
 
     <Button
