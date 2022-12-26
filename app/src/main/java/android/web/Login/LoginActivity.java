@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("CLick on btnLogin");
                 loginUserName = (edtLoginUserName.getText().toString().toUpperCase(Locale.ROOT));
                 loginPassword = (edtLoginPassword.getText().toString());
                 if(loginUserName.isEmpty() || loginPassword.isEmpty()){
