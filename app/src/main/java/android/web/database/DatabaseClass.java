@@ -23,5 +23,24 @@ public class DatabaseClass {
         }
         return rs;
     }
+    public static int updatePassword(String hashPass, String MSV){
+        int rs;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "update sinh_vien set Pass = '"+hashPass+"' where MaSinhVien = '"+MSV+"'";
+                System.out.println("Query: "+ query);
+                rs = st.executeUpdate(query);
+                return rs;
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+            e.printStackTrace();
+        }
+        return 0;
+    }
 
 }

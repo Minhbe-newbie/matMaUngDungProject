@@ -1,4 +1,4 @@
-package android.web.Login;
+package android.web.helper;
 
 public class Utils {
     public static final String EMAIL = "kma.at160541@gmail.com";

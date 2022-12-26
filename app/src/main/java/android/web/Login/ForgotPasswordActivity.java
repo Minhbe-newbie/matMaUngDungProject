@@ -28,6 +28,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
@@ -47,6 +48,8 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         btnSendMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                System.out.println("Click on btnSendMail");
                 email = (edtForgotPasswordEmail.getText().toString());
                 username = (edtForgotPasswordUsername.getText().toString().toUpperCase(Locale.ROOT));
                 btnSendMail.setEnabled(false);
@@ -65,18 +68,25 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                             if (Objects.equals(resObj.get(0).get("Email"), email)) {
                                 RandomDigits str = new RandomDigits();
                                 JSONObject otpObj = new JSONObject();
-
+                                //random otp
                                 String otp = str.RandomOTP();
-                                Date currentTime = Calendar.getInstance().getTime();
+                                System.out.println("OTP: " + otp);
                                 sendMail(otp);
+                                //get timestamp now
+                                String currentTime = String.valueOf(TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis()));
+                                //hash otp to save
                                 String hashOTP = BCrypt.withDefaults().hashToString(12, otp.toCharArray());
+                                //convert to object
                                 otpObj.put("currentTime", currentTime);
                                 otpObj.put("otp", hashOTP);
+                                otpObj.put("email", email);
+                                otpObj.put("username", username);
+                                //save to local
                                 String json = gson.toJson(otpObj);
                                 SharedPreferences.Editor editor = getSharedPreferences("preference_otp",MODE_PRIVATE).edit();
                                 editor.putString("otp", json);
                                 editor.commit();
-                                System.out.println("finish save to local");
+                                //navigate
                                 Intent i = new Intent(ForgotPasswordActivity.this, VerificationCodeActivity.class);
                                 startActivity(i);
                             } else {
