@@ -75,7 +75,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtStudentCode"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
@@ -109,7 +109,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtStudentName"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
@@ -143,7 +143,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtStudentBirth"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
@@ -177,7 +177,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtStudentPhoneNumber"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
@@ -211,7 +211,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtStudentEmail"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
@@ -245,7 +245,7 @@
             android:textSize="17dp" />
 
         <EditText
-
+            android:id="@+id/edtHomeTown"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
