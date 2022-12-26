@@ -22,12 +22,14 @@
         android:id="@+id/textView8"
         android:layout_width="112dp"
         android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="148dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Sinh Viên"
         android:textColor="@color/white"
         android:textSize="25dp"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="349dp"
@@ -151,17 +153,21 @@
             android:gravity="right"
             android:paddingRight="40dp"
             android:text="abc$" />
+        <!--       Hả Tưởng đoạn này phải là 1 Grp Box chọn 1 đống lựa chọn chứ?     -->
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnTransfer"
         android:layout_width="208dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="288dp"
         android:background="@drawable/border_textfield"
         android:gravity="center"
         android:text="Thanh toán"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="396dp" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
