@@ -40,10 +40,10 @@ public class StudentFragment extends Fragment {
 
     private void initUI() {
         ivTTSV = view.findViewById(R.id.ivTTSV);
-        ivCTH = view.findViewById(R.id.ivCTH);
-        ivDKT = view.findViewById(R.id.ivDKT);
-        ivLCN = view.findViewById(R.id.ivLCN);
-        ivTCD = view.findViewById(R.id.ivTCD);
+        ivCTH  = view.findViewById(R.id.ivCTH);
+        ivDKT  = view.findViewById(R.id.ivDKT);
+        ivLCN  = view.findViewById(R.id.ivLCN);
+        ivTCD  = view.findViewById(R.id.ivTCD);
 
         ivTCD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +105,5 @@ public class StudentFragment extends Fragment {
 
     private void clickTTSV() {
         System.out.println("Click True");
-
     }
 }

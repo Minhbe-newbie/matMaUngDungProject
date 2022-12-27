@@ -8,12 +8,7 @@ import android.view.ViewGroup;
 import android.web.R;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ChangeAccountInfoFragment#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
+
 public class ChangeAccountInfoFragment extends Fragment {
 
     private View view;

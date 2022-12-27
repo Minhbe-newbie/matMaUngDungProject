@@ -89,7 +89,7 @@
         android:text="abc$" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout1"
         android:layout_width="412dp"
         android:layout_height="79dp"
         android:orientation="horizontal"
@@ -189,7 +189,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
         android:layout_width="412dp"
         android:layout_height="39dp"
         android:layout_marginTop="256dp"
