@@ -1,5 +1,6 @@
 package android.web.FragmentHome;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,12 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.web.Login.LoginActivity;
 import android.web.R;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import java.sql.Connection;
+import FragmentStudent.CalenderActivity;
+import FragmentStudent.CheckScoreActivity;
+import FragmentStudent.SignSubjectActivity;
+import FragmentStudent.StudyProgramActivity;
 
 public class StudentFragment extends Fragment {
 
@@ -66,6 +68,7 @@ public class StudentFragment extends Fragment {
             public void onClick(View v) {
                 System.out.println("Đã chọn vào DKT");
                 clickDKT();
+
             }
         });
 
@@ -87,21 +90,32 @@ public class StudentFragment extends Fragment {
 
     }
 
-    private void clickTCD() {
-        System.out.println("Click True");
-    }
 
-    private void clickLCN() {
+
+    private void clickTCD() {
+        Intent intent = new Intent(getContext(), StudyProgramActivity.class);
+        startActivity(intent);
         System.out.println("Click True");
     }
 
     private void clickDKT() {
+        Intent intent = new Intent(getContext(), SignSubjectActivity.class);
+        startActivity(intent);
         System.out.println("Click True");
     }
 
     private void clickCTH() {
+        Intent intent = new Intent(getContext(), SignSubjectActivity.class);
+        startActivity(intent);
         System.out.println("Click True");
     }
+
+    private void clickLCN() {
+        Intent intent = new Intent(getContext(), CalenderActivity.class);
+        startActivity(intent);
+        System.out.println("Click True");
+    }
+
 
     private void clickTTSV() {
         System.out.println("Click True");

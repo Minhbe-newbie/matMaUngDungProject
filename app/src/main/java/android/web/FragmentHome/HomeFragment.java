@@ -43,7 +43,11 @@ public class HomeFragment extends Fragment {
         JSONObject otpObj = gson.fromJson(json, JSONObject.class);
         System.out.println(otpObj);
         try {
+            if (otpObj == null){
+                return;
+            }
             name = (String) otpObj.get("TenSinhVien");
+
             System.out.println(" Username: " + name);
         } catch (JSONException e) {
             e.printStackTrace();
