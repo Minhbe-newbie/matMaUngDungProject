@@ -125,7 +125,7 @@
             android:textSize="17dp" />
 
         <TextView
-            android:id="@+id/edtHavePay2"
+            android:id="@+id/edtHavePay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
