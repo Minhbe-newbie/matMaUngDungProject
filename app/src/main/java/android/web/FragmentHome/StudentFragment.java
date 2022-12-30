@@ -93,7 +93,7 @@ public class StudentFragment extends Fragment {
 
 
     private void clickTCD() {
-        Intent intent = new Intent(getContext(), StudyProgramActivity.class);
+        Intent intent = new Intent(getContext(),CheckScoreActivity.class); // sao lại StudyPr Activity  trong khi nó là tra cứu điểm
         startActivity(intent);
         System.out.println("Click True");
     }

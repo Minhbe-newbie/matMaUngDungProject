@@ -15,46 +15,40 @@
         android:theme="@style/Theme.HienThiGiaoDIen"
         tools:targetApi="31">
         <activity
-            android:name="FragmentStudent.StudyProgramActivity"
+            android:name=".CheckSignSubjectActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.CalenderActivity"
+            android:name=".StudyProgramActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.SignSubjectActivity"
+            android:name=".CalenderActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.CheckScoreActivity"
+            android:name=".SignSubjectActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity> <!-- <activity -->
-        <!-- android:name=".ChangeAccountFragment" -->
-        <!-- android:exported="false"> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.app.lib_name" -->
-        <!-- android:value="" /> -->
-        <!-- </activity> -->
-        <!-- <activity -->
-        <!-- android:name=".PaymentActivity" -->
-        <!-- android:exported="false"> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.app.lib_name" -->
-        <!-- android:value="" /> -->
-        <!-- </activity> -->
+        </activity>
+        <activity
+            android:name=".CheckScoreActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Login.IntroActivity"
             android:exported="false">

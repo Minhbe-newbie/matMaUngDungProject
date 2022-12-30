@@ -7,23 +7,18 @@ import android.view.View;
 import android.web.R;
 import android.widget.ImageView;
 
-public class SignSubjectActivity extends AppCompatActivity {
-
-
+public class CheckSignSubjectActivity extends AppCompatActivity {
 
     ImageView backRed;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_subject);
+        setContentView(R.layout.activity_check_sign_subject);
 
         initViews();
         addEvent();
     }
-
 
 
     private void addEvent() {
