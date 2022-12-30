@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.web.R;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class CheckSignSubjectActivity extends AppCompatActivity {
 
@@ -18,6 +19,14 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
 
         initViews();
         addEvent();
+
+        View textView3 = (TextView)findViewById(R.id.textView3);
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Click on ĐĂNG KÝ");
+            }
+        });
     }
 
 
@@ -34,4 +43,5 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
     private void initViews() {
         backRed= findViewById(R.id.backRed);
     }
+
 }

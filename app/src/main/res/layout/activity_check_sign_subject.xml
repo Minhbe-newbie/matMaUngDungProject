@@ -25,6 +25,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="ĐĂNG KÍ"
+            android:onClick="onClick"
+            android:clickable="true"
             />
 
         <Button
