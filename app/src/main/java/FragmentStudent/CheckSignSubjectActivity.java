@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.web.R;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class CheckSignSubjectActivity extends AppCompatActivity {
 
     ImageView backRed;
+    TextView tvSignUp;
+    Button btnBeenSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,7 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
     }
 
 
+
     private void addEvent() {
         backRed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,9 +35,24 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
                 finish();
             }
         });
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CheckSignSubjectActivity.this, "Dang ki", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnBeenSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CheckSignSubjectActivity.this, "Da Dang ki", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initViews() {
         backRed= findViewById(R.id.backRed);
+        tvSignUp= findViewById(R.id.tvSignUp);
+        btnBeenSignUp= findViewById(R.id.btnBeenSignUp);
     }
 }

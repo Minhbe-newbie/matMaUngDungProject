@@ -14,7 +14,7 @@ public class StudyProgramActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study_program);
+        setContentView(R.layout.activity_check_sign_subject);
 
         initViews();
         addEvent();

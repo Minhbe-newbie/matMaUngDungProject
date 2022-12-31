@@ -1,7 +1,10 @@
 package FragmentStudent;
 
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.web.R;
@@ -9,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class SignSubjectActivity extends AppCompatActivity {
 
@@ -49,13 +53,23 @@ public class SignSubjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(SignSubjectActivity.this, "Da Dang ki", Toast.LENGTH_SHORT).show();
+                clickDDK();
             }
         });
     }
+    private void clickDDK() {
+        Intent intent = new Intent(getApplicationContext(),CheckSignSubjectActivity.class);
+        startActivity(intent);
+        System.out.println("Click True");
+    }
+
 
     private void initViews() {
         backRed= findViewById(R.id.backRed);
         btnSignUp= findViewById(R.id.btnSignUp);
         tvBeenSignUp= findViewById(R.id.tvBeenSignUp);
     }
+
+
 }
+

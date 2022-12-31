@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvSignUp"
             android:layout_width="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:textColor="@color/red_500"
@@ -28,7 +28,7 @@
             />
 
         <Button
-            android:id="@+id/x"
+            android:id="@+id/btnBeenSignUp"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
