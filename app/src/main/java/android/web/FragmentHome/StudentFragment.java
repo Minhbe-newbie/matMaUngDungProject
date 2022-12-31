@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.web.R;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import FragmentStudent.CalenderActivity;
 import FragmentStudent.CheckScoreActivity;
@@ -50,7 +51,8 @@ public class StudentFragment extends Fragment {
         ivTCD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Đã chọn vào TCD");
+                System.out.println(""); // Cái print này k có tác dụng trên giao diện app đâu
+                Toast.makeText(getContext(), "Đã chọn vào TCD", Toast.LENGTH_SHORT).show();
                 clickTCD();
             }
         });
@@ -105,7 +107,7 @@ public class StudentFragment extends Fragment {
     }
 
     private void clickCTH() {
-        Intent intent = new Intent(getContext(), SignSubjectActivity.class);
+        Intent intent = new Intent(getContext(), StudyProgramActivity.class);
         startActivity(intent);
         System.out.println("Click True");
     }

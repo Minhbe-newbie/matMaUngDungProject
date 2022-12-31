@@ -15,35 +15,35 @@
         android:theme="@style/Theme.HienThiGiaoDIen"
         tools:targetApi="31">
         <activity
-            android:name=".CheckSignSubjectActivity"
+            android:name="FragmentStudent.CheckSignSubjectActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".StudyProgramActivity"
+            android:name="FragmentStudent.StudyProgramActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CalenderActivity"
+            android:name="FragmentStudent.CalenderActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignSubjectActivity"
+            android:name="FragmentStudent.SignSubjectActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CheckScoreActivity"
+            android:name="FragmentStudent.CheckScoreActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
