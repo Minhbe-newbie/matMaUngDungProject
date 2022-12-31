@@ -2,6 +2,7 @@ package FragmentStudent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.web.R;
@@ -39,6 +40,7 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CheckSignSubjectActivity.this, "Dang ki", Toast.LENGTH_SHORT).show();
+                clickDK();
             }
         });
 
@@ -48,6 +50,11 @@ public class CheckSignSubjectActivity extends AppCompatActivity {
                 Toast.makeText(CheckSignSubjectActivity.this, "Da Dang ki", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    private void clickDK() {
+        Intent intent = new Intent(getApplicationContext(),SignSubjectActivity.class);
+        startActivity(intent);
+        System.out.println("Click True");
     }
 
     private void initViews() {

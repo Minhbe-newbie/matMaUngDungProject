@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="FragmentStudent.CheckSignSubjectActivity">
+    tools:context="FragmentStudent.StudyProgramActivity">
 
     <Spinner
         android:id="@+id/spinnerKH"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="160dp"
         android:background="@drawable/border_textfield"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="244dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/border_textfield"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,18 +31,19 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="100dp"
         android:autofillHints="Đăng kí lớp"
         android:background="@drawable/border_textfield"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="57dp"
         android:layout_height="41dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/roboto_bold"
         android:text="LỌC"
         android:textSize="20dp"
@@ -54,44 +55,10 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="244dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="160dp"
         android:background="@drawable/border_textfield"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="349dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="28dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvSignUp"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:textColor="@color/red_500"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="15dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="ĐĂNG KÍ"
-            />
-
-        <Button
-            android:id="@+id/btnBeenSignUp"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/border_textfield"
-            android:gravity="center"
-            android:text="Đã đăng kí" />
-
-    </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -118,7 +85,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Đã đăng kí"
+            android:text="Chương trình học"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
 
