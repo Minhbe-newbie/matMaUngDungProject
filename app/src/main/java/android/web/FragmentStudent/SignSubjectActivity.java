@@ -1,12 +1,14 @@
-package FragmentStudent;
+package android.web.FragmentStudent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.web.R;
+import android.widget.Button;
 import android.widget.ImageView;
-
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,30 +18,35 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+public class SignSubjectActivity extends AppCompatActivity implements OnItemSelectedListener{
 
 
-public class StudyProgramActivity extends AppCompatActivity implements OnItemSelectedListener{
 
     ImageView backRed;
+    Button btnSignUp;
+    TextView tvBeenSignUp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study_program);
+        setContentView(R.layout.activity_sign_subject);
 
         initViews();
         addEvent();
-        Spinner spinnerLH  = (Spinner) findViewById(R.id.spinnerLH); //loai hinh
-        Spinner spinnerHDT = (Spinner) findViewById(R.id.spinnerHDT);  // he dao tao
-        Spinner spinnerKH = (Spinner) findViewById(R.id.spinnerKH); // khoa hoc
-        Spinner spinnerCN  = (Spinner) findViewById(R.id.spinnerCN); // chuyen ngành
+
+
+        Spinner spinnerCK  = (Spinner) findViewById(R.id.spinnerCK);
+        Spinner spinnerCCN = (Spinner) findViewById(R.id.spinnerCCN);
+        Spinner spinnerCHP = (Spinner) findViewById(R.id.spinnerCHP);
+        Spinner spinnerCNH  = (Spinner) findViewById(R.id.spinnerCNH);
 
 
         // Spinner click listener
-        spinnerLH.setOnItemSelectedListener(this);
-        spinnerHDT.setOnItemSelectedListener(this);
-        spinnerKH.setOnItemSelectedListener(this);
-        spinnerCN.setOnItemSelectedListener(this);
+        spinnerCK.setOnItemSelectedListener(this);
+        spinnerCCN.setOnItemSelectedListener(this);
+        spinnerCHP.setOnItemSelectedListener(this);
+        spinnerCNH.setOnItemSelectedListener(this);
 
 
         // Spinner Drop down elements
@@ -58,10 +65,10 @@ public class StudyProgramActivity extends AppCompatActivity implements OnItemSel
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
-        spinnerLH.setAdapter(dataAdapter);
-        spinnerHDT.setAdapter(dataAdapter);
-        spinnerKH.setAdapter(dataAdapter);
-        spinnerCN.setAdapter(dataAdapter);
+        spinnerCK.setAdapter(dataAdapter);
+        spinnerCCN.setAdapter(dataAdapter);
+        spinnerCHP.setAdapter(dataAdapter);
+        spinnerCNH.setAdapter(dataAdapter);
     }
 
     @Override
@@ -84,9 +91,34 @@ public class StudyProgramActivity extends AppCompatActivity implements OnItemSel
                 finish();
             }
         });
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignSubjectActivity.this, "Dang ki", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tvBeenSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignSubjectActivity.this, "Da Dang ki", Toast.LENGTH_SHORT).show();
+                clickDDK();
+            }
+        });
+    }
+    private void clickDDK() {
+        Intent intent = new Intent(getApplicationContext(),CheckSignSubjectActivity.class);
+        startActivity(intent);
+        System.out.println("Click True");
     }
 
+
     private void initViews() {
-        backRed = findViewById(R.id.backRed);
+        backRed= findViewById(R.id.backRed);
+        btnSignUp= findViewById(R.id.btnSignUp);
+        tvBeenSignUp= findViewById(R.id.tvBeenSignUp);
     }
+
+
 }
+

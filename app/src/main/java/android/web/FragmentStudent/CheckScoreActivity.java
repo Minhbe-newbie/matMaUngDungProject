@@ -1,4 +1,4 @@
-package FragmentStudent;
+package android.web.FragmentStudent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,17 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CheckScoreActivity extends AppCompatActivity implements OnItemSelectedListener{
 

@@ -15,42 +15,42 @@
         android:theme="@style/Theme.HienThiGiaoDIen"
         tools:targetApi="31" >
         <activity
-            android:name="FragmentStudent.StudyProgramActivity"
+            android:name="android.web.FragmentStudent.StudyProgramActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.CheckSignSubjectActivity"
+            android:name="android.web.FragmentStudent.CheckSignSubjectActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+<!--        <activity-->
+<!--            android:name="android.web.FragmentStudent.StudyProgramActivity1"-->
+<!--            android:exported="false" >-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+        <activity
+            android:name="android.web.FragmentStudent.CalenderActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.StudyProgramActivity1"
+            android:name="android.web.FragmentStudent.SignSubjectActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="FragmentStudent.CalenderActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="FragmentStudent.SignSubjectActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="FragmentStudent.CheckScoreActivity"
+            android:name="android.web.FragmentStudent.CheckScoreActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -58,7 +58,12 @@
         </activity>
         <activity
             android:name=".Login.IntroActivity"
-            android:exported="false" >
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -108,11 +113,7 @@
         <activity
             android:name=".MainHomeActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
