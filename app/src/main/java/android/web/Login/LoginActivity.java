@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                             }else{
                                 btnLogin.setEnabled(true);
                                 System.out.println("Login fail: Password is incorrect");
-                                Toast.makeText(LoginActivity.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Login fail: Password is incorrect", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             btnLogin.setEnabled(true);

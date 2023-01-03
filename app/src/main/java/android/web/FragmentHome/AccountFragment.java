@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.web.R;
 import android.widget.ImageView;
 
-import java.sql.Connection;
-
 public class AccountFragment extends Fragment {
 
     private View view;
@@ -28,7 +26,7 @@ public class AccountFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_account, container, false);
+        view = inflater.inflate(R.layout.activity_account, container, false);
 
         initUI();
 

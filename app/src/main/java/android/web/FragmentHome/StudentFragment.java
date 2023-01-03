@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.web.FragmentStudent.AccountActivity;
 import android.web.R;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -86,7 +88,8 @@ public class StudentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 System.out.println("Đã chọn vào TTSV");
-                clickTTSV();
+                Intent intent = new Intent(getContext(), AccountActivity.class); // sao lại StudyPr Activity  trong khi nó là tra cứu điểm
+                startActivity(intent);
             }
         });
 

@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 <!--Nút back này quay về đâu, dùng làm gì
-khi mà có thể back ở dưới thanh công cụ-->
+khi mà có thể back ở dưới thanh công cụ => thằng nào viết câu đằng trước ngu vl-->
         <ImageView
 
             android:layout_width="2dp"
@@ -34,30 +34,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:text="Thông tin sinh viên"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
-
-        <ImageView
-            android:id="@+id/ivEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:src="@drawable/change_info" />
     </LinearLayout>
-
-    <ImageView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="140dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
 
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,15 +57,14 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:text="Mã sinh viên"
             android:textSize="17dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edtStudentCode"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="AT160335"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
@@ -91,7 +72,7 @@ khi mà có thể back ở dưới thanh công cụ-->
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="442dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,15 +90,14 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:text="Họ và tên"
             android:textSize="17dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edtStudentName"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="Trịnh Công Minh"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
@@ -125,7 +105,7 @@ khi mà có thể back ở dưới thanh công cụ-->
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="492dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,21 +117,20 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical"
             android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
             android:paddingRight="20dp"
             android:text="Ngày sinh"
             android:textSize="17dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/edtStudentBirth"
             android:layout_width="340dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="30/07/2001"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
@@ -159,20 +138,19 @@ khi mà có thể back ở dưới thanh công cụ-->
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="542dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-
             android:layout_width="242dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical"
             android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
             android:paddingRight="20dp"
             android:text="Số điện thoại"
             android:textSize="17dp" />
@@ -185,7 +163,6 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:layout_weight="1"
             android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="098123456"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
@@ -193,7 +170,7 @@ khi mà có thể back ở dưới thanh công cụ-->
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -219,15 +196,15 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:layout_weight="1"
             android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="demo@gmail.com"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="360dp"
         android:layout_height="44dp"
-        android:layout_marginTop="642dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -253,8 +230,19 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:layout_weight="1"
             android:background="@drawable/border_textfield"
             android:fontFamily="@font/roboto_bold"
-            android:hint="Ở 1 nơi nào đó"
             android:paddingStart="10dp"
             android:textSize="15dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveInfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="120dp"
+        android:text="Lưu thông tin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
