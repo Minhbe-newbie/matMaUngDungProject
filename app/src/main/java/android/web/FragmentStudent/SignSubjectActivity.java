@@ -1,6 +1,4 @@
-package FragmentStudent;
-
-import static java.security.AccessController.getContext;
+package android.web.FragmentStudent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,13 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
+
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class SignSubjectActivity extends AppCompatActivity implements OnItemSelectedListener{

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="FragmentStudent.CalenderActivity">
+    tools:context="android.web.FragmentStudent.CalenderActivity">
     <LinearLayout
         android:layout_width="349dp"
         android:layout_height="41dp"

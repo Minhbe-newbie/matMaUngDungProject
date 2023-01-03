@@ -1,4 +1,4 @@
-package FragmentStudent;
+package android.web.FragmentStudent;
 
 import androidx.appcompat.app.AppCompatActivity;
 

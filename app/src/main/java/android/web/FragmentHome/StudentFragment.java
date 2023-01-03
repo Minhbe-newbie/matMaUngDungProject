@@ -12,10 +12,10 @@ import android.web.R;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import FragmentStudent.CalenderActivity;
-import FragmentStudent.CheckScoreActivity;
-import FragmentStudent.SignSubjectActivity;
-import FragmentStudent.StudyProgramActivity;
+import android.web.FragmentStudent.CalenderActivity;
+import android.web.FragmentStudent.CheckScoreActivity;
+import android.web.FragmentStudent.SignSubjectActivity;
+import android.web.FragmentStudent.StudyProgramActivity;
 
 public class StudentFragment extends Fragment {
 
