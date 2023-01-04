@@ -61,4 +61,36 @@ public class DatabaseClass {
         }
         return 0;
     }
+    public static Object getScoreByMSV(String MSV){
+        ResultSet rs = null;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "select *  from diem_so ds inner join ten_mon tm on tm.MaMon = ds.MaMon where MaSinhVien = '"+MSV+"'";
+                rs = st.executeQuery(query);
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return rs;
+    }
+    public static Object getStudyProgram(){
+        ResultSet rs = null;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "select * from ten_mon order by HocKy ";
+                rs = st.executeQuery(query);
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return rs;
+    }
 }

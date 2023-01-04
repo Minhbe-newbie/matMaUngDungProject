@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".User_Info">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <ImageView
         android:id="@+id/imageView5"
@@ -31,6 +30,7 @@
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
     <LinearLayout
         android:layout_width="318dp"
         android:layout_height="45dp"
@@ -49,12 +49,12 @@
 
             android:layout_width="124dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="17dp"
+            android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:text="Đổi mật khẩu" />
+            android:gravity="center"
+            android:text="Đổi mật khẩu"
+            android:textSize="17dp" />
 
         <ImageView
             android:id="@+id/ivDMK"
@@ -63,6 +63,7 @@
             android:layout_weight="1"
             android:src="@drawable/back_icon" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="318dp"
         android:layout_height="45dp"
@@ -81,12 +82,12 @@
 
             android:layout_width="124dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="17dp"
+            android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:text="Đánh giá" />
+            android:gravity="center"
+            android:text="Đánh giá"
+            android:textSize="17dp" />
 
         <ImageView
             android:id="@+id/ivDG"
@@ -95,6 +96,7 @@
             android:layout_weight="1"
             android:src="@drawable/back_icon" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="318dp"
         android:layout_height="45dp"
@@ -114,12 +116,12 @@
 
             android:layout_width="124dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="17dp"
+            android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:text="Thông tin ứng dụng" />
+            android:gravity="center"
+            android:text="Thông tin ứng dụng"
+            android:textSize="17dp" />
 
         <ImageView
             android:id="@+id/ivTTUD"
@@ -148,12 +150,12 @@
 
             android:layout_width="124dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="17dp"
+            android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:text="Đăng xuất" />
+            android:gravity="center"
+            android:text="Đăng xuất"
+            android:textSize="17dp" />
 
         <ImageView
             android:id="@+id/ivDX"
@@ -163,21 +165,45 @@
             android:src="@drawable/back_icon" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView12"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/boy_1"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="91dp" />
+        android:layout_height="match_parent"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.5"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/boy_1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="91dp" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="157dp"
-        android:layout_height="56dp"
-        android:src="@drawable/__img___group_468"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="249dp" />
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trịnh Công Minh"
+            android:textFontWeight="@android:integer/config_mediumAnimTime"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="91dp" android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvStudentCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AT160534"
+            android:textFontWeight="@android:integer/config_mediumAnimTime"
+            android:gravity="center"/>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

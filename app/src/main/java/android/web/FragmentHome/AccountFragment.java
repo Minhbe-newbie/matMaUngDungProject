@@ -26,26 +26,10 @@ public class AccountFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.activity_account, container, false);
-
-        initUI();
+        view = inflater.inflate(R.layout.fragment_user__info, container, false);
 
         return view;
     }
 
-    private void initUI() {
-        ivEdit = view.findViewById(R.id.ivEdit);
 
-        ivEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Đã bấm nút chỉnh sửa edit");
-                clickEdit();
-            }
-        });
-    }
-
-    private void clickEdit() {
-        System.out.println("Nhập lệnh vào đây");
-    }
 }
