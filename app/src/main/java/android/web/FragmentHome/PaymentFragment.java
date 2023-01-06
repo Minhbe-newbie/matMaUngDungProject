@@ -58,9 +58,9 @@ public class PaymentFragment extends Fragment {
     }
 
     private void setMakeEverythingComeTrue() {
-        edtHavePay.setText("Thêm thông tin zô đây");
-        edtHaveToPay.setText("Thêm thông tin zô đây");
-        edtRemainAmountNeedToPay.setText("Thông tin mô");
+//        edtHavePay.setText("Thêm thông tin zô đây");
+        edtHavePay.setText("42.000.000 vnd");
+        edtRemainAmountNeedToPay.setText("0 vnd");
 
     }
 }

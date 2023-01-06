@@ -35,7 +35,7 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:textSize="20dp" />
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="wrap_content"
+            android:layout_width="15dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -60,6 +60,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:gravity="center_vertical"
             android:paddingRight="20dp"
             android:text="Mã sinh viên"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:textSize="17dp" />
 
         <TextView
@@ -92,6 +98,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:gravity="center_vertical"
             android:paddingRight="20dp"
             android:text="Họ và tên"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:textSize="17dp" />
 
         <TextView
@@ -124,6 +136,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:fontFamily="@font/roboto_bold"
             android:paddingRight="20dp"
             android:text="Ngày sinh"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:textSize="17dp" />
 
         <TextView
@@ -156,6 +174,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:fontFamily="@font/roboto_bold"
             android:paddingRight="20dp"
             android:text="Số điện thoại"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:textSize="17dp" />
 
         <TextView
@@ -188,6 +212,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:gravity="center_vertical"
             android:paddingRight="20dp"
             android:text="Email"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:textSize="17dp" />
 
         <TextView
@@ -219,6 +249,12 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:fontFamily="@font/roboto_bold"
             android:gravity="center_vertical"
             android:paddingRight="20dp"
+            android:letterSpacing="0.01"
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textColor="@color/black"
             android:text="Quê quán"
             android:textSize="17dp" />
 
