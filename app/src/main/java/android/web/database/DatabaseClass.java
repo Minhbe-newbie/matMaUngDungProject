@@ -94,4 +94,37 @@ public class DatabaseClass {
         }
         return rs;
     }
+    public static Object getSignSubjectFromTC3(){
+        ResultSet rs = null;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "select * from tin_chi3";
+                rs = st.executeQuery(query);
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return rs;
+    }
+    public static  Object getClassFromTC1(){
+        ResultSet rs = null;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "select * from tin_chi";
+                rs = st.executeQuery(query);
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return rs;
+    }
+
 }

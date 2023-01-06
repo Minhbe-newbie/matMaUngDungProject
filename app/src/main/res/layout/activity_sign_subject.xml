@@ -98,7 +98,7 @@
         khi mà có thể back ở dưới thanh công cụ-->
 
         <TextView
-            android:layout_width="133dp"
+            android:layout_width="100dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -110,7 +110,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -133,28 +133,6 @@
             android:textColor="@color/white"
             android:textSize="20dp" />
 
-        <TextView
-
-            android:layout_width="160dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="Đã ĐK"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="-"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
     </LinearLayout>
 
     <ScrollView
