@@ -34,7 +34,7 @@
             android:gravity="center"
             android:text="Lịch cá nhân"
             android:textColor="@color/red_500"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/ivEdit"
@@ -45,16 +45,26 @@
             android:src="@drawable/change_info" />
     </LinearLayout>
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="410dp"
-        android:layout_height="374dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintVertical_bias="0.0" />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:compactCalendarBackgroundColor="#FEFEFE"
+        app:compactCalendarCurrentDayBackgroundColor="#8CC7F3"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#0E47A0"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextColor="#000000"
+        app:compactCalendarCurrentDayTextColor="#F0F7FD"
+        app:compactCalendarCurrentSelectedDayTextColor="#FEFEFE"
+        app:compactCalendarTextSize="17sp"
+        app:layout_constraintTop_toTopOf="@+id/tvMonth"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/text_info"
@@ -62,16 +72,35 @@
         android:layout_height="232dp"
         android:layout_marginBottom="24dp"
         android:text="Test View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\nTest View 1\n
-Test vỉew2\n"
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\nTest View 1\n
+            Test vỉew2\n"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:text="Tháng"
+        android:textSize="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:letterSpacing="0.01"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        app:layout_constraintBottom_toTopOf="@+id/compactcalendar_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintVertical_bias="0.523" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
