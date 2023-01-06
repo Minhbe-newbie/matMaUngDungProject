@@ -52,7 +52,6 @@ public class DatabaseClass {
             if(connect != null){
                 Statement st = connect.createStatement();
                 String query = "update sinh_vien set SoDienThoai='"+phone+"', Email='"+email+"', QueQuan='"+address+"' where MaSinhVien = '"+ MSV+"'";
-                System.out.println("Query: "+ query);
                 rs = st.executeUpdate(query);
                 return rs;
             }
@@ -126,5 +125,42 @@ public class DatabaseClass {
         }
         return rs;
     }
+    public static int insertToDangKy(String MSV, String MaLop, String TenLop){
+        int rs;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "insert into `dang_ky` (`MaLop`, `MaSV`, `TenLop`) values ('" +MaLop+ "', '" + MSV+ "', '"+TenLop +"')";
+                System.out.println(query);
 
+
+                rs = st.executeUpdate(query);
+                return rs;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return 0;
+    }
+    public static Object getSignedSubjectByMSV(String MSV){
+        ResultSet rs = null;
+        Connection connect;
+        try {
+            ConnectionHelper connHelper = new ConnectionHelper();
+            connect = connHelper.ConnectionClass();
+            if (connect != null) {
+                Statement st = connect.createStatement();
+                String query = "select * from dang_ky where MaSV = '" +MSV +"'";
+                System.out.println(query);
+                rs = st.executeQuery(query);
+            }
+        }catch (Exception e){
+            Log.e("Error when connect SQL", e.getMessage());
+        }
+        return rs;
+    }
 }
