@@ -27,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 public class CalenderActivity extends AppCompatActivity {
@@ -54,7 +55,8 @@ public class CalenderActivity extends AppCompatActivity {
         // Use constants provided by Java Calendar class
         compactCalendarView.setFirstDayOfWeek(Calendar.SUNDAY);
         compactCalendarView.setUseThreeLetterAbbreviation(true);
-//        compactCalendarView.setDayColumnNames("T2","T3","T4","T5","T6","T7","CN");
+        String[] dayColumnNames = {"CN","T2","T3","T4","T5","T6","T7"};
+        compactCalendarView.setDayColumnNames(dayColumnNames);
 
         // Tạo 1 sự kiện, Và vcl thời gian nó đòi kiểu theo dạng này?
         // https://www.epochconverter.com/ link lấy thời gian
@@ -98,38 +100,14 @@ public class CalenderActivity extends AppCompatActivity {
             }
         }
 
-//        compactCalendarView.addEvent(AddEvent("Test",1673082000000L));
-//
-//        Event ev1 = new Event(Color.RED, 1673082000000L, data);
-//        compactCalendarView.addEvent(ev1);
-//
-//        // Added event 2 GMT: Sun, 07 Jun 2015 19:10:51 GMT
-//        Event ev2 = new Event(Color.RED, 1673168400000L,data2);
-//        compactCalendarView.addEvent(ev2);
-//
-//        ev2 = new Event(Color.RED, 1673269200000L,data2);
-//        compactCalendarView.addEvent(ev2);
-//
-//        ev2 = new Event(Color.RED, 1673276400000L,data2);
-//        compactCalendarView.addEvent(ev2);
-//        // Query for events on Sun, 07 Jun 2015 GMT.
-//        // Time is not relevant when querying for events, since events are returned by day.
-//        // So you can pass in any arbitary DateTime and you will receive all events for that day.
-//        List<Event> events = compactCalendarView.getEvents(1673276400000L); // can also take a Date object
-//
-//        // events has size 2 with the 2 events inserted previously
-//        Log.d(TAG, "Events: " + events);
-
         // Lấy thông tin của từng ngày một khi bấm vào
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
             public void onDayClick(Date dateClicked) {
                 List<Event> events = compactCalendarView.getEvents(dateClicked);
                 Log.d(TAG, "Day was clicked: " + dateClicked + " with events " + events);
-//                text_info.setText("Day was clicked: " + dateClicked + " \n with events " + events);
 
                 try {
-//                    text_info.setText( String.valueOf(events.get(0).getTimeInMillis()));
                     String info = "";
 
                     if(!events.isEmpty()) {
@@ -144,16 +122,27 @@ public class CalenderActivity extends AppCompatActivity {
                 catch (Exception e){
                     e.printStackTrace();
                 }
-
-
-
             }
 
             @Override
             public void onMonthScroll(Date firstDayOfNewMonth) {
-                Log.d(TAG, "Month was scrolled to: " + firstDayOfNewMonth);
-                text_info.setText("Month was scrolled to: " + firstDayOfNewMonth);
-                System.out.println(firstDayOfNewMonth.getMonth());
+                List<Event> events = compactCalendarView.getEvents(firstDayOfNewMonth);
+                Log.d(TAG, "Day was clicked: " + firstDayOfNewMonth + " with events " + events);
+                try {
+                    String info = "";
+
+                    if(!events.isEmpty()) {
+                        System.out.println(events);
+                        for (int i = 0; i < events.size(); i++) {
+                            info += (String) events.get(i).getData()+"\n\n";
+                        }
+                    }
+                    text_info.setText(info);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                }
+
                 tvMonth.setText("Tháng "+(firstDayOfNewMonth.getMonth()+1) + " năm " + (firstDayOfNewMonth.getYear()-100+2000));
             }
         });
