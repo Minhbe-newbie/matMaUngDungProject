@@ -2,9 +2,44 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
-    android:layout_height="400dp"
+    android:layout_height="300dp"
     android:layout_gravity="center"
     android:background="@drawable/border_textfield">
+
+    <TextView
+        android:id="@+id/THI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/TP1"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="THI"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tvTHI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TP2"
+        android:layout_marginLeft="141dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/Diem"
+        android:fontFamily="@font/roboto_light"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="8"
+        android:textSize="14dp" />
 
     <TextView
         android:id="@+id/tvTenMon"
@@ -12,7 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Nhập tên môn vào đây"
-
         android:textSize="20dp"
         android:layout_marginTop="38dp"
         android:fontFamily="@font/roboto_bold"
@@ -61,8 +95,8 @@
         />
 
     <TextView
-        android:id="@+id/ThoiGian"
-        android:text="Thời gian:"
+        android:id="@+id/SoTinChi"
+        android:text="Số tín chỉ:"
         android:textSize="14dp"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="18dp"
@@ -79,15 +113,16 @@
         />
 
     <TextView
-        android:id="@+id/tvThoiGian"
-        android:text="tvThoiGian"
+        android:id="@+id/tvSoTinChi"
+        android:text="tvSoTinChi"
         android:textSize="14dp"
         android:layout_marginTop="12dp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="11dp"
         android:fontFamily="@font/roboto_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ThoiGian"
+        android:layout_toRightOf="@id/SoTinChi"
+        android:layout_below="@id/HocPhan"
         android:letterSpacing="0.04"
         android:shadowColor="#40000000"
         android:shadowDx="0"
@@ -96,8 +131,8 @@
         />
 
     <TextView
-        android:id="@+id/DiaDiem"
-        android:text="Địa điểm:"
+        android:id="@+id/DanhGia"
+        android:text="Đánh giá:"
         android:textSize="14dp"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="18dp"
@@ -105,7 +140,7 @@
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvThoiGian"
+        android:layout_below="@id/SoTinChi"
         android:letterSpacing="0.04"
         android:shadowColor="#40000000"
         android:shadowDx="0"
@@ -114,17 +149,16 @@
         />
 
     <TextView
-        android:id="@+id/tvDiaDiem"
-        android:text="tvDiaDiem"
+        android:id="@+id/tvDanhGia"
+        android:text="tvDanhGia"
         android:textSize="14dp"
         android:layout_marginTop="13dp"
         android:layout_marginLeft="18dp"
         android:fontFamily="@font/roboto_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvThoiGian"
-        android:layout_toRightOf="@id/DiaDiem"
-
+        android:layout_below="@id/SoTinChi"
+        android:layout_toRightOf="@id/DanhGia"
         android:letterSpacing="0.04"
         android:shadowColor="#40000000"
         android:shadowDx="0"
@@ -133,39 +167,164 @@
         />
 
     <TextView
-        android:id="@+id/GiangVien"
-        android:text="Giảng viên:"
-        android:textSize="14dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="18dp"
+        android:id="@+id/TP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvDiaDiem"
         android:letterSpacing="0.04"
         android:shadowColor="#40000000"
         android:shadowDx="0"
         android:shadowDy="4"
         android:shadowRadius="4"
-        />
+        android:text="TP1"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
 
     <TextView
-        android:id="@+id/tvGiangVien"
-        android:text="tvGiangVien"
-        android:textSize="14dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="18dp"
-        android:fontFamily="@font/roboto_light"
+        android:id="@+id/tvTP1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvDiaDiem"
-        android:layout_toRightOf="@id/GiangVien"
+        android:layout_below="@id/TP1"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/Diem"
+        android:fontFamily="@font/roboto_light"
         android:letterSpacing="0.04"
         android:shadowColor="#40000000"
         android:shadowDx="0"
         android:shadowDy="4"
         android:shadowRadius="4"
-        />
+        android:text="8"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/TP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/TP1"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="TP2"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tvTP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TP2"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/Diem"
+        android:fontFamily="@font/roboto_light"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="8"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/TKHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/TP2"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="TKHP"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tvTKHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TKHP"
+        android:layout_marginLeft="194dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/Diem"
+        android:fontFamily="@font/roboto_light"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="8"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/DBC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/TKHP"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="ĐBC"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tvDBC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TKHP"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/Diem"
+        android:fontFamily="@font/roboto_light"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="B"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/Diem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DanhGia"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="Điểm:"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
 
 </RelativeLayout>

@@ -7,7 +7,9 @@ import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.web.R;
 import android.web.database.DatabaseClass;
 import android.web.helper.JSONServices;
@@ -49,11 +51,11 @@ public class CheckScoreActivity extends AppCompatActivity {
     String countS;
     int sumCount = 0;
     TextView tvDTB10, tvDTB4, tvDTBC;
-    String MaMon, tp1S, tp2S, thiS;
 
     String name, tkhp, dbc, stS, tp1Str, tp2Str, thiStr, MaMonStr;
-    Float tkhpF;
+    Float tkhpF, tp1F, tp2F, thiF;
 
+    TextView tvTenMon, tvHocPhan, tvSoTinChi, tvDanhGia, tvTP1, tvTP2, tvTHI, tvTKHP, tvDBC;
     DecimalFormat df = new DecimalFormat("0.00");
     @SuppressLint("MissingInflatedId")
     @Override
@@ -82,10 +84,6 @@ public class CheckScoreActivity extends AppCompatActivity {
                     tkhpSbjF= Float.parseFloat(tkhpSbj);
                     dbcSbj = (String)resObj.get(i).get("Diem_Bang_Chu");
                     countS = (String) resObj.get(i).get("SoTin");
-                    tp1S = (String) resObj.get(i).get("TP1");
-                    tp2S = (String) resObj.get(i).get("TP2");
-                    thiS  = (String) resObj.get(i).get("THI");
-                    MaMon = (String) resObj.get(i).get("MaMon");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -95,8 +93,9 @@ public class CheckScoreActivity extends AppCompatActivity {
                     row.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            AlertDialog alertDialog = new AlertDialog.Builder(CheckScoreActivity.this).create();
-
+                            AlertDialog scoreDialog = new AlertDialog.Builder(CheckScoreActivity.this).create();
+                            LayoutInflater layoutInflater = LayoutInflater.from(getBaseContext());
+                            View dialogView =  layoutInflater.inflate(R.layout.popup_score, null);
                             try {
                                 name = (String)resObj.get(finalI).get("TenMon");
                                 tkhp = (String)resObj.get(finalI).get("TKHP");
@@ -104,19 +103,39 @@ public class CheckScoreActivity extends AppCompatActivity {
                                 dbc = (String)resObj.get(finalI).get("Diem_Bang_Chu");
                                 stS = (String) resObj.get(finalI).get("SoTin");
                                 tp1Str = (String) resObj.get(finalI).get("TP1");
+                                tp1F = Float.parseFloat(tp1Str);
                                 tp2Str = (String) resObj.get(finalI).get("TP2");
+                                tp2F = Float.parseFloat(tp2Str);
                                 thiStr  = (String) resObj.get(finalI).get("THI");
+                                thiF = Float.parseFloat(thiStr);
                                 MaMonStr = (String) resObj.get(finalI).get("MaMon");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
 
-                            System.out.println(name + tkhpF + dbc + stS + tp1Str + tp2Str+ thiStr + MaMonStr );
+                            tvTenMon = dialogView.findViewById(R.id.tvTenMon);
+                            tvHocPhan = dialogView.findViewById(R.id.tvHocPhan);
+                            tvSoTinChi = dialogView.findViewById(R.id.tvSoTinChi);
+                            tvDanhGia = dialogView.findViewById(R.id.tvDanhGia);
+                            tvTP1 = dialogView.findViewById(R.id.tvTP1);
+                            tvTP2 = dialogView.findViewById(R.id.tvTP2);
+                            tvTHI = dialogView.findViewById(R.id.tvTHI);
+                            tvTKHP  = dialogView.findViewById(R.id.tvTKHP );
+                            tvDBC = dialogView.findViewById(R.id.tvDBC);
 
-                            alertDialog.setTitle(name);
-                            alertDialog.setMessage(Float.toString(tkhpF));
+                            tvTenMon.setText(name);
+                            tvHocPhan.setText(MaMonStr);
+                            tvSoTinChi.setText(stS);
+                            tvDanhGia.setText("DAT");
+                            tvTP1.setText(Float.toString(tp1F));
+                            tvTP2.setText(Float.toString(tp2F));
+                            tvTHI.setText(Float.toString(thiF));
+                            tvTKHP.setText(Float.toString(tkhpF));
+                            tvDBC.setText(dbc);
 
-                            alertDialog.show();
+
+                            scoreDialog.setView(dialogView);
+                            scoreDialog.show();
                         }
                     });
                     TextView sttTv = new TextView(this);
@@ -124,7 +143,7 @@ public class CheckScoreActivity extends AppCompatActivity {
                     sttTv.setPadding(30, 0, 0, 0);
 
                     TextView nameSbjTv = new TextView(this);
-                    nameSbjTv.setLayoutParams(new TableRow.LayoutParams(550, 60));
+                    nameSbjTv.setLayoutParams(new TableRow.LayoutParams(550, ViewGroup.LayoutParams.WRAP_CONTENT));
                     nameSbjTv.setPadding(10, 0, 10, 0);
 
                     TextView tkhpSbjTv = new TextView(this);
@@ -133,10 +152,10 @@ public class CheckScoreActivity extends AppCompatActivity {
                     TextView dbcSbjTv = new TextView(this);
                     dbcSbjTv.setLayoutParams(new TableRow.LayoutParams(150, 60));
 
-                    ImageView imgView = new ImageView(this);
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(30, 30);
-                    imgView.setLayoutParams(lp);
-                    imgView.setImageDrawable(getResources().getDrawable(R.drawable.info__1__1));
+//                    ImageView imgView = new ImageView(this);
+//                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(30, 30);
+//                    imgView.setLayoutParams(lp);
+//                    imgView.setImageDrawable(getResources().getDrawable(R.drawable.info__1__1));
 
                     sttSbj = Integer.toString(j);
                     sttTv.setText(sttSbj);
@@ -154,7 +173,7 @@ public class CheckScoreActivity extends AppCompatActivity {
                     row.addView(nameSbjTv);
                     row.addView(tkhpSbjTv);
                     row.addView(dbcSbjTv);
-                    row.addView(imgView);
+//                    row.addView(imgView);
 
 
 
