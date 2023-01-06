@@ -25,24 +25,30 @@
             android:src="@drawable/back_red" />
 
         <TextView
+            android:letterSpacing="0.01"
 
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
             android:layout_width="253dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="20dp"
             android:gravity="center"
             android:text="Lịch cá nhân"
             android:textColor="@color/red_500"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/change_info" />
+            />
     </LinearLayout>
 
 
@@ -71,36 +77,42 @@
         android:layout_width="342dp"
         android:layout_height="232dp"
         android:layout_marginBottom="24dp"
-        android:text="Test View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\nTest View 1\n
-            Test vỉew2\n"
+        android:fontFamily="@font/roboto_regular"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:background="@drawable/border_calender"
+        android:text=""
+        android:paddingTop="15dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:textColor="#1564BF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compactcalendar_view" />
 
     <TextView
         android:id="@+id/tvMonth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:text="Tháng"
-        android:textSize="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_regular"
         android:letterSpacing="0.01"
         android:shadowColor="#40000000"
         android:shadowDx="0"
         android:shadowDy="4"
         android:shadowRadius="4"
+        android:text="Tháng 1 năm 2023"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/compactcalendar_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.523"
+        app:layout_constraintTop_toTopOf="@id/linearLayout1"
+        android:layout_marginTop="60dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
