@@ -15,7 +15,7 @@ public class ConnectionHelper {
         String ConnectionURL = null;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            ConnectionURL = "jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_f330b4f895ee47c";
+            ConnectionURL = "jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_f330b4f895ee47c?useUnicode=true&characterEncoding=UTF-8";
             connection = DriverManager.getConnection(ConnectionURL, "b86b0972a3c618", "231b7e11");
         }catch (Exception e){
             Log.e("Error ", e.getMessage());
