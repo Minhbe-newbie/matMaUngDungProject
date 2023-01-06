@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HienThiGiaoDIen</string>
+    <string name="app_name">KMA</string>
     <string name="title_activity_code_tu">codeTu</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
