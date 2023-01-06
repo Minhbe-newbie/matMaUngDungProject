@@ -20,15 +20,21 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="112dp"
-        android:layout_height="34dp"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="148dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Sinh Viên"
+        android:gravity="center"
+        android:letterSpacing="0.01"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:text="Thanh toán"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -58,7 +64,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="40dp"
-            android:text="abc$" />
+            android:text="42.000.000 vnd" />
 
     </LinearLayout>
 
@@ -90,7 +96,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="40dp"
-            android:text="abc$" />
+            android:text="41.000.000 vnd" />
 
     </LinearLayout>
 
@@ -121,7 +127,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="40dp"
-            android:text="abc$" />
+            android:text="1.000.000 vnd" />
 
     </LinearLayout>
 
@@ -152,7 +158,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="40dp"
-            android:text="abc$" />
+            android:text="Mb Bank" />
         <!--       Hả Tưởng đoạn này phải là 1 Grp Box chọn 1 đống lựa chọn chứ?     -->
     </LinearLayout>
 

@@ -106,18 +106,20 @@ public class CalenderActivity extends AppCompatActivity {
             public void onDayClick(Date dateClicked) {
                 List<Event> events = compactCalendarView.getEvents(dateClicked);
                 Log.d(TAG, "Day was clicked: " + dateClicked + " with events " + events);
-
+                text_info.setText("Lịch trống");
                 try {
                     String info = "";
-
                     if(!events.isEmpty()) {
                         System.out.println(events);
                         for (int i = 0; i < events.size(); i++) {
                                 info += (String) events.get(i).getData()+"\n\n";
                             }
                         }
+                    if (info.length()==0){
+                        text_info.setText("Lịch trống");
+                    }else
 
-                text_info.setText(info);
+                    text_info.setText(info);
                 }
                 catch (Exception e){
                     e.printStackTrace();
@@ -137,7 +139,11 @@ public class CalenderActivity extends AppCompatActivity {
                             info += (String) events.get(i).getData()+"\n\n";
                         }
                     }
-                    text_info.setText(info);
+                    if (info.length()==0){
+                        text_info.setText("Lịch trống");
+                    }else
+
+                        text_info.setText(info);
                 }
                 catch (Exception e){
                     e.printStackTrace();

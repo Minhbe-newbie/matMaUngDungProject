@@ -19,6 +19,7 @@ khi mà có thể back ở dưới thanh công cụ => thằng nào viết câu 
 
             android:layout_width="2dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/back_red" />
@@ -31,6 +32,7 @@ khi mà có thể back ở dưới thanh công cụ => thằng nào viết câu 
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
+            android:paddingRight="70dp"
             android:text="Thông tin sinh viên"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
