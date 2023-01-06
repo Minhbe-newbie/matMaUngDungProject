@@ -53,8 +53,6 @@ public class StudentFragment extends Fragment {
         ivTCD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(""); // Cái print này k có tác dụng trên giao diện app đâu
-                Toast.makeText(getContext(), "Đã chọn vào TCD", Toast.LENGTH_SHORT).show();
                 clickTCD();
             }
         });
@@ -62,7 +60,6 @@ public class StudentFragment extends Fragment {
         ivLCN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Đã chọn và LCN");
                 clickLCN();
             }
         });
@@ -70,7 +67,6 @@ public class StudentFragment extends Fragment {
         ivDKT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Đã chọn vào DKT");
                 clickDKT();
 
             }
@@ -79,7 +75,6 @@ public class StudentFragment extends Fragment {
         ivCTH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Đã chọn vào CTH");
                 clickCTH();
             }
         });
@@ -87,7 +82,6 @@ public class StudentFragment extends Fragment {
         ivTTSV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Đã chọn vào TTSV");
                 Intent intent = new Intent(getContext(), AccountActivity.class); // sao lại StudyPr Activity  trong khi nó là tra cứu điểm
                 startActivity(intent);
             }
@@ -100,25 +94,21 @@ public class StudentFragment extends Fragment {
     private void clickTCD() {
         Intent intent = new Intent(getContext(),CheckScoreActivity.class); // sao lại StudyPr Activity  trong khi nó là tra cứu điểm
         startActivity(intent);
-        System.out.println("Click True");
     }
 
     private void clickDKT() {
         Intent intent = new Intent(getContext(), SignSubjectActivity.class);
         startActivity(intent);
-        System.out.println("Click True");
     }
 
     private void clickCTH() {
         Intent intent = new Intent(getContext(), StudyProgramActivity.class);
         startActivity(intent);
-        System.out.println("Click True");
     }
 
     private void clickLCN() {
         Intent intent = new Intent(getContext(), CalenderActivity.class);
         startActivity(intent);
-        System.out.println("Click True");
     }
 
 

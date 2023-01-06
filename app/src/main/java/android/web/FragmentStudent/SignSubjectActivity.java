@@ -123,6 +123,7 @@ public class SignSubjectActivity extends AppCompatActivity{
                                         int result = DatabaseClass.insertToDangKy(MSV, id, name);
                                         if(result == 1){
                                             Toast.makeText(SignSubjectActivity.this, "Đăng ký môn thành công", Toast.LENGTH_SHORT).show();
+                                            subjectDialog.dismiss();
                                         }else{
                                             Toast.makeText(SignSubjectActivity.this, "Đăng ký môn thất bại", Toast.LENGTH_SHORT).show();
                                         }

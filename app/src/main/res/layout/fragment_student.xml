@@ -48,28 +48,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="46dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/img_graduating_student" />
-
-        <TextView
-
-            android:layout_width="124dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Thông tin sinh viên" />
-
-        <ImageView
             android:id="@+id/ivTTSV"
-            android:layout_width="10dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
+            android:src="@drawable/ttsv" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="318dp"
@@ -81,28 +64,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-             android:layout_width="46dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/img_file_storage" />
-
-        <TextView
-
-            android:layout_width="124dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Chương trình học" />
-
-        <ImageView
             android:id="@+id/ivCTH"
-            android:layout_width="10dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
+            android:src="@drawable/cth" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="318dp"
@@ -114,29 +79,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-
-            android:layout_width="46dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/edit_png" />
-
-        <TextView
-
-            android:layout_width="124dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Đăng kí tín" />
-
-        <ImageView
             android:id="@+id/ivDKT"
-            android:layout_width="10dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
+            android:src="@drawable/dkt" />
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="318dp"
@@ -148,29 +96,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-
-            android:layout_width="46dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/calendar_png" />
-
-        <TextView
-
-            android:layout_width="124dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Lịch cá nhân" />
-
-        <ImageView
             android:id="@+id/ivLCN"
-            android:layout_width="10dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
+            android:src="@drawable/lich" />
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -183,29 +114,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-
-            android:layout_width="46dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/search_png" />
-
-        <TextView
-
-            android:layout_width="124dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            android:textSize="17dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Tra cứu điểm" />
-
-        <ImageView
             android:id="@+id/ivTCD"
-            android:layout_width="10dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
+            android:src="@drawable/tcd" />
+
     </LinearLayout>
 
 
