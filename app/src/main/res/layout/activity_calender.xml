@@ -25,12 +25,18 @@
             android:src="@drawable/back_red" />
 
         <TextView
+            android:letterSpacing="0.01"
 
+            android:shadowColor="#40000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="4"
             android:layout_width="253dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="20dp"
             android:gravity="center"
             android:text="Lịch cá nhân"
             android:textColor="@color/red_500"
@@ -38,11 +44,11 @@
 
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/change_info" />
+            />
     </LinearLayout>
 
 
@@ -105,7 +111,8 @@
         app:layout_constraintBottom_toTopOf="@+id/compactcalendar_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.523"
+        app:layout_constraintTop_toTopOf="@id/linearLayout1"
+        android:layout_marginTop="60dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
