@@ -26,6 +26,7 @@ public class DatabaseClass {
     public static int updatePassword(String hashPass, String MSV){
         int rs;
         Connection connect;
+        System.out.println(MSV);
         try {
             ConnectionHelper connHelper = new ConnectionHelper();
             connect = connHelper.ConnectionClass();

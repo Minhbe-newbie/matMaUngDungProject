@@ -7,17 +7,6 @@
     tools:context="android.web.FragmentStudent.SignSubjectActivity"
     tools:ignore="ExtraText">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="57dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="LỌC"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="349dp"
@@ -83,84 +72,25 @@
             android:textColor="@color/red_500"
             android:textSize="20dp" />
 
-        <ImageView
-            android:id="@+id/ivEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:src="@drawable/change_info" />
 
     </LinearLayout>
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-
-        android:layout_width="414dp"
-        android:layout_height="349dp"
-        android:layout_marginTop="336dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <!-- Table Data -->
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="138dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="g"
-                android:textSize="12sp" />
-
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="g"
-                android:textSize="12sp" />
-
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="g"
-                android:textSize="12sp" />
-
-            <TextView
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="g"
-                android:textSize="12sp" />
-
-        </TableRow>
-
-
-    </TableLayout>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/bgcheckpointheader"
-        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/tableSignSubject"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="412dp"
         android:layout_height="39dp"
-        android:layout_marginTop="286dp"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -168,7 +98,6 @@
         khi mà có thể back ở dưới thanh công cụ-->
 
         <TextView
-
             android:layout_width="133dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
@@ -176,6 +105,18 @@
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="STT"
+
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Chọn"
 
             android:textColor="@color/white"
             android:textSize="20dp" />
@@ -200,22 +141,41 @@
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="TKHP"
+            android:text="Đã ĐK"
             android:textColor="@color/white"
             android:textSize="20dp" />
 
         <TextView
-            android:layout_width="180dp"
+            android:layout_width="100dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Đánh giá"
+            android:text="-"
             android:textColor="@color/white"
             android:textSize="20dp" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="406dp"
+        android:layout_height="532dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableSignSubject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -225,57 +185,5 @@
         android:text="Đăng kí lớp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="115dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="452dp"
-        android:text="Hiển thị"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinnerCK"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="148dp"
-        android:autofillHints="Đăng kí lớp"
-        android:background="@drawable/border_textfield"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinnerCCN"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="204dp"
-        android:background="@drawable/border_textfield"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinnerCHP"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="204dp"
-        android:background="@drawable/border_textfield"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinnerCNH"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/border_textfield"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
