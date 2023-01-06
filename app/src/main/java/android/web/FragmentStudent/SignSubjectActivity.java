@@ -22,16 +22,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.sql.Array;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.google.gson.Gson;
 
@@ -43,16 +35,14 @@ public class SignSubjectActivity extends AppCompatActivity{
     Button btnSignUp;
     TextView tvBeenSignUp;
     TableLayout tableSignSubject;
-    RadioGroup rg;
-    RadioButton radioButton;
 
     Gson gson = new Gson();
     String MSV;
 
-    String TenLopI, MaLopI,MaMonI,  TenLopJ, MaLopJ, MaMonJ;
-
-    String NgayBDK, NgayKTK, ThuK, SoTietK, NgayBDH, NgayKTH, ThuH, SoTietH;
-    String nameClass, idClass, idSub, nameClassC, idClassC, idSubC;
+    String TenLopI, MaLopI,MaMonI;
+    String time="";
+    String nameClass, idClass, idSub, nameClassC, idClassC, idSubC, thu, NgayBD, NgayKT, SoTiet;
+    String name, id;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,8 +60,7 @@ public class SignSubjectActivity extends AppCompatActivity{
         List<JSONObject> classObj = JSONServices.getFormattedResult(res);
 
         tableSignSubject = findViewById(R.id.tableSignSubject);
-        String[] idArr = new String[resObj.size()];
-        Arrays.fill(idArr, "");
+
         if(!resObj.isEmpty()){
             System.out.println(resObj);
             for(int i =0; i < resObj.size(); i++){
@@ -94,9 +83,9 @@ public class SignSubjectActivity extends AppCompatActivity{
 
                         System.out.println(finalI);
                         try {
-                           nameClass = (String) resObj.get(finalI).get("TenLop");
-                           idClass = (String) resObj.get(finalI).get("MaLop");
-                          idSub = (String) resObj.get(finalI).get("MaMon");
+                            nameClass = (String) resObj.get(finalI).get("TenLop");
+                            idClass = (String) resObj.get(finalI).get("MaLop");
+                            idSub = (String) resObj.get(finalI).get("MaMon");
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -105,18 +94,41 @@ public class SignSubjectActivity extends AppCompatActivity{
                                 nameClassC = (String) classObj.get(h).get("TenLop");
                                 idClassC = (String) classObj.get(h).get("MaLop");
                                 idSubC = (String) classObj.get(h).get("MaMon");
+                                thu = (String) classObj.get(h).get("Thu");
+                                NgayBD = (String) classObj.get(h).get("NgayBD");
+                                NgayKT = (String) classObj.get(h).get("NgayKT");
+                                SoTiet = (String) classObj.get(h).get("SoTiet");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                             if(idClass.equals(idClassC)){
                                 //show dialog khi 2 cái id bằng nhau
                                 //lấy dữ liệu ở dòng 107 đổ vào dialog
-
-
+                                System.out.println(nameClassC+ " "+ idClassC + " "+thu +" "+ NgayBD +" "+ NgayKT +" "+ SoTiet);
+                                name = nameClassC;
+                                id = idClassC;
+                                time +="Thứ: "+thu + " Từ " + NgayBD +" đến " + NgayKT + " Tiết: "+ SoTiet + "\n" ;
                                 TextView tvHocPhan = dialogView.findViewById(R.id.tvHocPhan);
-                                tvHocPhan.setText(MaLopI);
+                                tvHocPhan.setText(idSubC);
                                 TextView tvTenMon = dialogView.findViewById(R.id.tvTenMon);
-                                tvTenMon.setText(TenLopI);
+                                tvTenMon.setText(nameClassC);
+                                TextView tvThoiGian = dialogView.findViewById(R.id.tvThoiGian);
+                                tvThoiGian.setText(time);
+
+                                Button btnDKH = dialogView.findViewById(R.id.btnDKH);
+                                btnDKH.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        System.out.println(MSV+ " "+id + " "+ name);
+                                        int result = DatabaseClass.insertToDangKy(MSV, id, name);
+                                        if(result == 1){
+                                            Toast.makeText(SignSubjectActivity.this, "Đăng ký môn thành công", Toast.LENGTH_SHORT).show();
+                                        }else{
+                                            Toast.makeText(SignSubjectActivity.this, "Đăng ký môn thất bại", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+
                                 subjectDialog.setView(dialogView);
                                 subjectDialog.show();
                             }
@@ -127,11 +139,7 @@ public class SignSubjectActivity extends AppCompatActivity{
                 sttTv.setLayoutParams(new TableRow.LayoutParams(150, 60));
                 sttTv.setPadding(30, 0, 0, 0);
 
-                rg = new RadioGroup(this);
-                radioButton = new RadioButton(this);
-                rg.addView(radioButton);
 
-                rg.setOrientation(RadioGroup.HORIZONTAL);
 
                 TextView tvTenLop = new TextView(this);
                 tvTenLop.setLayoutParams( new TableRow.LayoutParams(750, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -141,25 +149,9 @@ public class SignSubjectActivity extends AppCompatActivity{
                 tvTenLop.setText(TenLopI);
 
                 row.addView(sttTv);
-                row.addView(rg);
                 row.addView(tvTenLop);
 
                 tableSignSubject.addView(row);
-
-                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        System.out.println(idArr);
-                       // idArr[i] = MaLop;
-
-                    }
-                });
-                rg.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        rg.clearCheck();
-                    }
-                });
             }
         }
 
