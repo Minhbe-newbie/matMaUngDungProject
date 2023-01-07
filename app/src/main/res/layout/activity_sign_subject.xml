@@ -47,7 +47,6 @@
         android:id="@+id/linearLayout1"
         android:layout_width="412dp"
         android:layout_height="79dp"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <!--Nút back này quay về đâu, dùng làm gì
@@ -56,21 +55,24 @@
             android:id="@+id/backRed"
             android:layout_width="2dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/back_red" />
 
         <TextView
 
-            android:layout_width="253dp"
+            android:layout_width="357dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Đăng kí học"
+            android:paddingRight="50dp"
+            android:text="     Đăng ký học"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
+
 
 
     </LinearLayout>
@@ -98,20 +100,20 @@
         khi mà có thể back ở dưới thanh công cụ-->
 
         <TextView
-            android:layout_width="70dp"
+            android:layout_width="46dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="STT"
+            android:gravity="center_vertical"
+            android:text="    STT"
 
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
 
-            android:layout_width="253dp"
+            android:layout_width="324dp"
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -119,7 +121,8 @@
             android:gravity="center_vertical"
             android:text="Môn học"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
+" />
 
     </LinearLayout>
 

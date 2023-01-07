@@ -32,7 +32,7 @@
         android:shadowDy="4"
         android:shadowRadius="4"
         android:gravity="center"
-        android:text="Sinh Viên"
+        android:text="Sinh viên"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"

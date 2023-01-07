@@ -48,7 +48,23 @@
             android:textColor="@color/white"
             android:textSize="10dp" />
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/DanhGia"
+        android:text="Tin tức"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView6"
+        android:letterSpacing="0.04"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        />
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"

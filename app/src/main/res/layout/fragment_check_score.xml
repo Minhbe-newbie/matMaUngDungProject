@@ -17,11 +17,12 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="157dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
             android:paddingRight="20dp"
             android:text="Điểm trung bình"
             android:textSize="17dp" />
@@ -48,11 +49,12 @@
 
         <TextView
 
-            android:layout_width="151dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
             android:paddingRight="20dp"
             android:text="chưa biết làm cái gì"
             android:textSize="17dp" />
@@ -81,8 +83,8 @@
         khi mà có thể back ở dưới thanh công cụ-->
         <ImageView
 
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/back_red" />
@@ -101,8 +103,8 @@
 
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="15dp"
-            android:layout_height="45dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/change_info" />
@@ -192,7 +194,7 @@
             android:text="STT"
 
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
 
@@ -204,7 +206,7 @@
             android:gravity="center_vertical"
             android:text="Môn học"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
 
@@ -216,7 +218,7 @@
             android:gravity="center"
             android:text="TKHP"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="180dp"
@@ -227,7 +229,7 @@
             android:gravity="center"
             android:text="Đánh giá"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
     </LinearLayout>
 
 

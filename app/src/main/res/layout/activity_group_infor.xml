@@ -27,7 +27,7 @@
             android:src="@drawable/back_red" />
 
         <TextView
-android:paddingRight="70dp"
+            android:paddingRight="70dp"
             android:layout_width="253dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"

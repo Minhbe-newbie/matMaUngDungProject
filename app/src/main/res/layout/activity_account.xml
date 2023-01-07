@@ -17,13 +17,14 @@
 khi mà có thể back ở dưới thanh công cụ-->
         <ImageView
 
-            android:layout_width="2dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:src="@drawable/back_red" />
+
         <TextView
+
             android:layout_width="253dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -33,10 +34,11 @@ khi mà có thể back ở dưới thanh công cụ-->
             android:text="Thông tin sinh viên"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
+
         <ImageView
             android:id="@+id/ivEdit"
-            android:layout_width="15dp"
-            android:layout_height="45dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/change_info" />

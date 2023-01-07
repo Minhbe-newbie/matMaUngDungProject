@@ -19,19 +19,20 @@
             android:id="@+id/backRed"
             android:layout_width="2dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:src="@drawable/back_red" />
 
         <TextView
 
-            android:layout_width="253dp"
+            android:layout_width="357dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
+            android:paddingRight="50dp"
             android:text="Tra cứu điểm"
             android:textColor="@color/red_500"
             android:textSize="20dp" />
@@ -158,7 +159,7 @@
             android:gravity="center"
             android:text="STT"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="253dp"
@@ -169,7 +170,7 @@
             android:gravity="center_vertical"
             android:text="Môn học"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
 
@@ -181,7 +182,7 @@
             android:gravity="center"
             android:text="TKHP"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="120dp"
@@ -192,7 +193,7 @@
             android:gravity="center"
             android:text="ĐBC"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="126dp"
@@ -203,7 +204,7 @@
             android:gravity="center"
             android:text="-"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
     </LinearLayout>
 
     <ScrollView
